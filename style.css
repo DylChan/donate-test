@@ -154,7 +154,7 @@ p {
                 "feature-section"
                 "image-card-section"
                 "hover-image-section";
-    grid-template-rows: .5fr .5fr .5fr .6fr .5fr;
+    grid-template-rows: .5fr .5fr .5fr .6fr .4fr;
     grid-template-columns: auto;
 
 }
@@ -243,14 +243,90 @@ Navbar
     padding: 16px 16px 32px;
     line-height: 1.625rem;
 }
+.hov-overlay{
+    background-color: rgba(202, 5, 5, 0.8);
+    bottom:0;
+    left:0;
+    right:0;
+    height:0;
+    width:100%;
+    position:absolute;
+    overflow: hidden;
+    z-index:2;
+    transition: .5s ease;
+}
+.hov-item1:hover .hov-overlay1{
+    height:100%;
+}
+.hov-item2:hover .hov-overlay2{
+    height:100%;
+}
+.hov-item3:hover .hov-overlay3{
+    height:100%;
+}
+.hov-item4:hover .hov-overlay4{
+    height:100%;
+}
+.hov-item5:hover .hov-overlay5{
+    height:100%;
+}
+.hov-item6:hover .hov-overlay6{
+    height:100%;
+}
 .hover-image-section{
+    margin-top:0;
+    position:relative;
+    top:0;
+    padding-top:0;
     display:grid;
+    height:100%;
+    width:100%;
+    grid-gap:10px;
     grid-template-areas: 
-    "hov-item1" "hov-item1" "hov-item2" "hov-item3",
-    "hov-item1" "hov-item1" "hov-item6" "hov-item6",
-    "hov-item4" "hov-item5" "hov-item6" "hov-item6";
-    grid-template-columns: 4(.5fr);
-    grid-template-rows: 3(.5fr);
+    "hov-item1 hov-item1 hov-item2 hov-item3"
+    "hov-item1 hov-item1 hov-item6 hov-item6"
+    "hov-item4 hov-item5 hov-item6 hov-item6";
+}
+.hov-image{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hov-info{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+.hov-item1{
+    grid-area: hov-item1;
+    position:relative;
+}
+.hov-item2{
+    grid-area: hov-item2;
+    position:relative;
+}
+.hov-item3{
+    grid-area: hov-item3;
+    position:relative;
+}
+.hov-item4{
+    grid-area: hov-item4;
+    position:relative;
+}
+.hov-item5{
+    grid-area: hov-item5;
+    position:relative;
+}
+.hov-item6{
+    grid-area: hov-item6;
+    position:relative;
 }
 /* image card section */
 .image-card{
