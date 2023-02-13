@@ -152,8 +152,9 @@ p {
                 "video"
                 "cards"
                 "feature-section"
-                "image-card-section";
-    grid-template-rows: .5fr .5fr .5fr .6fr;
+                "image-card-section"
+                "hover-image-section";
+    grid-template-rows: .5fr .5fr .5fr .6fr .5fr;
     grid-template-columns: auto;
 
 }
@@ -241,6 +242,15 @@ Navbar
     text-decoration: underline;
     padding: 16px 16px 32px;
     line-height: 1.625rem;
+}
+.hover-image-section{
+    display:grid;
+    grid-template-areas: 
+    "hov-item1" "hov-item1" "hov-item2" "hov-item3",
+    "hov-item1" "hov-item1" "hov-item6" "hov-item6",
+    "hov-item4" "hov-item5" "hov-item6" "hov-item6";
+    grid-template-columns: 4(.5fr);
+    grid-template-rows: 3(.5fr);
 }
 /* image card section */
 .image-card{
