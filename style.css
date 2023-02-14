@@ -199,7 +199,6 @@ Navbar
 /* card section */
 .card-section{
     grid-area: cards;
-    margin-top:6rem;
     margin-bottom:6rem;
     top:0;
     width:100%;
@@ -210,8 +209,7 @@ Navbar
     display: flex;
     justify-content: center;
     padding:48px 16px;
-    margin:0;
-    padding:0;
+    margin-top:6rem;
 }
 .card{
     display:flex;
