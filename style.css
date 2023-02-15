@@ -462,6 +462,7 @@ Navbar
 
     background: #900;
     box-shadow: var(--light-shadow);
+    border-bottom:.1rem solid #000;
     position: fixed;
     top:10rem;
     transition:.3s;
