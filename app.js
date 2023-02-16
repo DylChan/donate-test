@@ -76,6 +76,30 @@ imageBtn3.addEventListener("click", function(){
 });
 }
 
+const hamburger = document.querySelector(".hamburger");
+const bar1 = document.querySelector(".bar1");
+const bar2 = document.querySelector(".bar2");
+const bar3 = document.querySelector(".bar3");
+const mainNavbar = document.querySelector(".main-nav");
+const mainNavbarLinks = document.querySelector(".main-nav-links");    
+function hamburgerMenu(){
+    hamburger.addEventListener("click", function(){
+        if(mainNavbar.classList.contains("main-nav-active")){
+            mainNavbar.classList.remove("main-nav-active");
+            mainNavbarLinks.classList.remove("main-nav-links-active");
+            bar1.classList.remove("rotate-down");
+            bar2.classList.remove("hide");
+            bar3.classList.remove("rotate-up");
+        }
+        else{
+            mainNavbar.classList.add("main-nav-active");
+            mainNavbarLinks.classList.add("main-nav-links-active");
+            bar1.classList.add("rotate-down");
+            bar2.classList.add("hide");
+            bar3.classList.add("rotate-up");
+        }
+    });
+}
 
 //variables for navbar sticker
 const navbar = document.querySelector(".subnav");
@@ -88,7 +112,7 @@ function navbarSticker(){
     else{
         navbar.classList.remove("sticky-subnav");
     }
-    console.log(sticky);
 }
 hoverImage();
 window.onscroll=function(){navbarSticker()};
+hamburgerMenu();
