@@ -207,6 +207,7 @@ Navbar
     display: flex;
     justify-content: space-between;
     padding:3rem 30rem;
+    width:100vw;
 }
 .card{
     display:flex;
@@ -825,7 +826,7 @@ Navbar
         display: flex;
     }
     .card-container{
-        width:100%;
+        width:100vw;
         padding:0;
         justify-content: center;
         align-items: center;
