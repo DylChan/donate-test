@@ -10,6 +10,7 @@ const info3 = document.querySelector(".info3");
 const imgTitle1 = document.querySelector(".img-title1");
 const imgTitle2 = document.querySelector(".img-title2");
 const imgTitle3 = document.querySelector(".img-title3");
+//allows the hover image section to work correctly
 function hoverImage(){
 //each button toggles the image to show text below it one at a time:
 imageBtn1.addEventListener("click", function(){
@@ -82,6 +83,7 @@ const bar2 = document.querySelector(".bar2");
 const bar3 = document.querySelector(".bar3");
 const mainNavbar = document.querySelector(".main-nav");
 const mainNavbarLinks = document.querySelector(".main-nav-links");    
+//creates hamburger menu for mobile
 function hamburgerMenu(){
     hamburger.addEventListener("click", function(){
         if(mainNavbar.classList.contains("main-nav-active")){
@@ -105,6 +107,7 @@ function hamburgerMenu(){
 const navbar = document.querySelector(".subnav");
 const tabBanner = document.querySelector(".current-tab");
 const sticky = tabBanner.offsetTop;
+//allows the sticky navbar to work
 function navbarSticker(){
     if(window.pageYOffset >= sticky){
         navbar.classList.add("sticky-subnav");
@@ -113,6 +116,64 @@ function navbarSticker(){
         navbar.classList.remove("sticky-subnav");
     }
 }
+
+//function to swap between cards when on mobile
+const card1 = document.querySelector(".card1");
+const card2 = document.querySelector(".card2");
+const card3 = document.querySelector(".card3");
+const card4 = document.querySelector(".card4");
+const cardBtn1 = document.querySelector(".card-btn1");
+const cardBtn2 = document.querySelector(".card-btn2");
+const cardBtn3 = document.querySelector(".card-btn3");
+const cardBtn4 = document.querySelector(".card-btn4");
+function cardSelector(){
+    cardBtn1.addEventListener("click",function(){
+        if(!cardBtn1.classList.contains("card-btn-active")){
+            cardBtn1.classList.add("card-btn-active");
+            card1.classList.remove("card-hide");
+            card2.classList.add("card-hide");
+            card3.classList.add("card-hide");
+            card4.classList.add("card-hide");
+            cardBtn2.classList.remove("card-btn-active");
+            cardBtn3.classList.remove("card-btn-active");
+            cardBtn4.classList.remove("card-btn-active");
+        }
+    });
+    cardBtn2.addEventListener("click",function(){
+        if(!cardBtn2.classList.contains("card-btn-active")){
+            cardBtn2.classList.add("card-btn-active");
+            card2.classList.remove("card-hide");
+            card1.classList.add("card-hide");
+            card3.classList.add("card-hide");
+            card4.classList.add("card-hide");
+            cardBtn1.classList.remove("card-btn-active");
+            cardBtn3.classList.remove("card-btn-active");
+            cardBtn4.classList.remove("card-btn-active");
+        }});
+    cardBtn3.addEventListener("click",function(){
+        if(!cardBtn3.classList.contains("card-btn-active")){
+            cardBtn3.classList.add("card-btn-active");
+            card3.classList.remove("card-hide");
+            card2.classList.add("card-hide");
+            card1.classList.add("card-hide");
+            card4.classList.add("card-hide");
+            cardBtn2.classList.remove("card-btn-active");
+            cardBtn1.classList.remove("card-btn-active");
+            cardBtn4.classList.remove("card-btn-active");
+        }});
+    cardBtn4.addEventListener("click", function(){
+        if(!cardBtn4.classList.contains("card-btn-active")){
+            cardBtn4.classList.add("card-btn-active");
+            card4.classList.remove("card-hide");
+            card2.classList.add("card-hide");
+            card3.classList.add("card-hide");
+            card1.classList.add("card-hide");
+            cardBtn2.classList.remove("card-btn-active");
+            cardBtn3.classList.remove("card-btn-active");
+            cardBtn1.classList.remove("card-btn-active");
+        }});
+}
+cardSelector();
 hoverImage();
 window.onscroll=function(){navbarSticker()};
 hamburgerMenu();

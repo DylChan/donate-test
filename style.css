@@ -250,6 +250,9 @@ Navbar
     padding: 16px 16px 32px;
     line-height: 1.625rem;
 }
+.card-selector{
+    display:none;
+}
 .hov-overlay{
     background-color: rgba(202, 5, 5, 0.8);
     bottom:0;
@@ -605,9 +608,11 @@ Navbar
 .feature-box{
     margin-bottom:4rem;
     grid-area:feature-section;
+    width:100vw;
 }
 .feature-box-container{
     display:flex;
+    width:100%;
     height:100%;
     background-color: #900;
 }
@@ -616,11 +621,11 @@ Navbar
 }
 .feature-box-text{
     display:flex;
+    height:100%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 30%;
-    align-items: flex-start;
+    width: 45%;
 }
 .feature-box h3{
     padding: 0 32px 24px 80px;
@@ -732,6 +737,9 @@ Navbar
             z-index: -2;
             filter:brightness(50%);
     }
+    .video-still{
+        display:none;
+    }
     .video-section h1{
         grid-area: video;
         position:absolute;
@@ -816,6 +824,9 @@ Navbar
         font-size:2rem;
         align-items: center;
     }
+    .video-container{
+        width:100%;
+    }
     .video-section h1{
         font-size:1.5rem;
         top:38%;
@@ -835,7 +846,97 @@ Navbar
         padding:0;
         height:70%;
     }
-    .card3, .card4{
+    .card-hide{
         display:none;
+    }
+}
+@media only screen and (max-width:428px) {
+    /* whole page */
+    .container{
+        margin-top:10rem;
+        grid-template-rows: 50vh 50vh 80vh 50vh 50vh 50vh 50vh;
+    }
+    /* video background section */
+    .video-container{
+        display:none;
+    }
+    .video-section img{
+        display:block;
+        width:100%;
+        height:100%;
+    }
+    .video-section h1{
+        font-size:2.5rem;
+        text-align: center;
+        width:90%;;
+    }
+    /* card section  */
+    .card-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        height:95%;
+        width:90%;
+    }
+    .card-selector{
+        display: flex;
+        margin-top: .5rem;
+    }
+    .card-btn{
+        width:1rem;
+        height:1rem;
+        border: 4px solid #900;
+        margin:0 .25rem;
+        border-radius:50%;
+    }
+    .card-btn-active{
+        background-color: #900;
+    }
+    .card-hide{
+        display:none;
+    }
+    .feature-box{
+        height:80vh;
+    }
+    .feature-box-text{
+        height:auto;
+        width:auto;
+    }
+    .feature-box-container{
+        flex-direction: column;
+    }
+    .feature-box-image{
+        height:35%;
+        width:100%;
+    }
+    .feature-box-text{
+        height:65%;
+        width:auto;
+        justify-content: center;
+        align-items: center;
+        padding:1rem;
+    }
+    .feature-box-text h3{
+        padding:0;
+    }
+    .feature-box-description{
+        padding:0;
+        text-align: center;
+    }
+    .feature-box-help{
+        padding:0;
+    }
+    .feature-box-buttons{
+        padding:2rem 0;
+        flex-direction:column;
+        justify-content: space-around;
+    }
+    .learn-btn{
+        margin-right:0;
+        margin-bottom:1rem;
+    }
+    .learn-btn, .donate-btn{
+        font-size:1.5rem;
     }
 }
