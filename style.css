@@ -835,6 +835,7 @@ Navbar
     .card-section{
         width:100vw;
         display: flex;
+        max-height:100%;
     }
     .card-container{
         width:100vw;
@@ -882,10 +883,21 @@ Navbar
         flex-direction: column;
         align-items: center;
     }
+    .card-container{
+        flex-direction: column;
+        height:100%;
+    }
     .card{
         height:95%;
         width:90%;
     }
+    .card h3{
+        padding:0;
+    }
+    .card-link{
+        padding:0;
+    }
+
     .card-selector{
         display: flex;
         margin-top: .5rem;
@@ -937,11 +949,12 @@ Navbar
         padding:0;
     }
     .feature-box-buttons{
-        padding:2rem 0;
+        padding:0;
         flex-direction:column;
         justify-content: space-around;
     }
     .learn-btn{
+        margin-top:.5rem;
         margin-right:0;
         margin-bottom:1rem;
     }
@@ -1029,4 +1042,16 @@ Navbar
         margin-bottom:.5rem;
     }
 
+}
+@media only screen and (max-width:375px){
+    .container{
+        margin-top:8rem;
+        grid-template-rows: 50vh 50vh 80vh 35vh 30vh 50vh 50vh;
+    }
+    .container-extend{
+        grid-template-rows: 50vh 50vh 80vh 75vh 30vh 50vh 50vh;
+    }
+    .feature-box-text p{
+        margin:0;
+    }
 }
