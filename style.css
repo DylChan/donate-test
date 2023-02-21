@@ -857,7 +857,7 @@ Navbar
         grid-template-rows: 50vh 50vh 80vh 25vh 25vh 50vh 50vh;
     }
     .container-extend{
-        grid-template-rows: 50vh 50vh 80vh 75vh 25vh 50vh 50vh;
+        grid-template-rows: 50vh 50vh 80vh 60vh 25vh 50vh 50vh;
     }
     .current-tab{
         height:3rem;
@@ -985,6 +985,8 @@ Navbar
     .info{
         padding:0;
         height:100%;
+        margin-left:.5rem;
+        width:100%;
     }
     .info h4{
         margin-top:1rem;
