@@ -384,7 +384,7 @@ Navbar
 .image-card-section{
     grid-area:image-card-section;
     top:0;
-    width:100%;
+    width:100vw;
     padding: 0 16px;
     margin: 0;
 }
@@ -854,7 +854,10 @@ Navbar
     /* whole page */
     .container{
         margin-top:10rem;
-        grid-template-rows: 50vh 50vh 80vh 50vh 50vh 50vh 50vh;
+        grid-template-rows: 50vh 50vh 80vh 25vh 25vh 50vh 50vh;
+    }
+    .container-extend{
+        grid-template-rows: 50vh 50vh 80vh 75vh 25vh 50vh 50vh;
     }
     /* video background section */
     .video-container{
@@ -892,6 +895,7 @@ Navbar
     }
     .card-btn-active{
         background-color: #900;
+        opacity:1;
     }
     .card-hide{
         display:none;
@@ -939,4 +943,82 @@ Navbar
     .learn-btn, .donate-btn{
         font-size:1.5rem;
     }
+    .image-card-section{
+        display:flex;
+        height:100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding:0;
+    }
+    .image-card-section h2{
+        font-size:1.5rem;
+        text-align: left;
+        margin-top:1.5rem;
+        margin-left:.5rem;
+        margin-bottom: .5rem;
+    }
+    .image-card-container{
+        margin-top: 1rem;
+        width:100%;
+        justify-content: space-between;
+    }
+    .image-card{
+        border: 1px solid #000;
+        margin-left:.5rem;
+        margin-right:0.5rem;
+    }
+    .image-card h3{
+        display:none;
+    }
+    .info-container{
+        grid-area:image-card-section;
+        height:100%;
+        padding:0;
+    }
+    .info{
+        padding:0;
+        height:100%;
+    }
+    .info h4{
+        margin-top:1rem;
+        font-size: 2rem;
+    }
+    .banner-section{
+        overflow: hidden;
+        width:100%;
+        margin-top:1rem;
+        margin-bottom:0;
+        background-color: white;
+    }
+    .banner{
+        height:10rem;
+        width:100%;
+    }
+    .hover-image-section{
+        display:none;
+    }
+    .testimonial-section{
+        margin-top: 2rem;
+    }
+    .testimonial-section h4{
+        font-size:1.75rem;
+    }
+    .testimonial-section p{
+        margin-top:0;
+    }
+    .testimonial-intro{
+        width:90%;
+    }
+    .testimonial-list{
+        width:90%;
+    }
+    .testimonial-item{
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial-img{
+        margin-bottom:.5rem;
+    }
+
 }
