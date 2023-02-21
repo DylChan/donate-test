@@ -141,48 +141,64 @@ function cardSelector() {
         if (!cardBtn1.classList.contains("card-btn-active")) {
             cardBtn1.classList.add("card-btn-active");
             card1.classList.remove("card-hide");
+            card1.classList.add("fade-in");
             card2.classList.add("card-hide");
             card3.classList.add("card-hide");
             card4.classList.add("card-hide");
             cardBtn2.classList.remove("card-btn-active");
             cardBtn3.classList.remove("card-btn-active");
             cardBtn4.classList.remove("card-btn-active");
+            cardBtn2.classList.remove("fade-in");
+            cardBtn3.classList.remove("fade-in");
+            cardBtn4.classList.remove("fade-in");
         }
     });
     cardBtn2.addEventListener("click", function () {
         if (!cardBtn2.classList.contains("card-btn-active")) {
             cardBtn2.classList.add("card-btn-active");
             card2.classList.remove("card-hide");
+            card2.classList.add("fade-in");
             card1.classList.add("card-hide");
             card3.classList.add("card-hide");
             card4.classList.add("card-hide");
             cardBtn1.classList.remove("card-btn-active");
             cardBtn3.classList.remove("card-btn-active");
             cardBtn4.classList.remove("card-btn-active");
+            cardBtn1.classList.remove("fade-in");
+            cardBtn3.classList.remove("fade-in");
+            cardBtn4.classList.remove("fade-in");
         }
     });
     cardBtn3.addEventListener("click", function () {
         if (!cardBtn3.classList.contains("card-btn-active")) {
             cardBtn3.classList.add("card-btn-active");
             card3.classList.remove("card-hide");
+            card3.classList.add("fade-in");
             card2.classList.add("card-hide");
             card1.classList.add("card-hide");
             card4.classList.add("card-hide");
             cardBtn2.classList.remove("card-btn-active");
             cardBtn1.classList.remove("card-btn-active");
             cardBtn4.classList.remove("card-btn-active");
+            cardBtn2.classList.remove("fade-in");
+            cardBtn1.classList.remove("fade-in");
+            cardBtn4.classList.remove("fade-in");
         }
     });
     cardBtn4.addEventListener("click", function () {
         if (!cardBtn4.classList.contains("card-btn-active")) {
             cardBtn4.classList.add("card-btn-active");
             card4.classList.remove("card-hide");
+            card4.classList.add("fade-in");
             card2.classList.add("card-hide");
             card3.classList.add("card-hide");
             card1.classList.add("card-hide");
             cardBtn2.classList.remove("card-btn-active");
             cardBtn3.classList.remove("card-btn-active");
             cardBtn1.classList.remove("card-btn-active");
+            cardBtn2.classList.remove("fade-in");
+            cardBtn3.classList.remove("fade-in");
+            cardBtn1.classList.remove("fade-in");
         }
     });
 }
